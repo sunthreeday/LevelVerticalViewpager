@@ -6,9 +6,6 @@ import android.graphics.Point;
 import android.os.Build;
 import android.view.WindowManager;
 
-/**
- * Created by jameson on 12/19/15.
- */
 public class ScreenUtil {
     @TargetApi(Build.VERSION_CODES.HONEYCOMB_MR2)
     public static int getScreenWidth(Context context) {

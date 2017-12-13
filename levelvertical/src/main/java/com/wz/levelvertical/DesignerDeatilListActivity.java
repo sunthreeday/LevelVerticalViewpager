@@ -24,10 +24,6 @@ import java.util.List;
 
 import static com.wz.levelvertical.util.SimulateNetAPI.getOriginalFundData;
 
-/**
- * 设计师详情页面
- * Created by wz on 2017/7/18.
- */
 
 public class DesignerDeatilListActivity extends FragmentActivity {
 

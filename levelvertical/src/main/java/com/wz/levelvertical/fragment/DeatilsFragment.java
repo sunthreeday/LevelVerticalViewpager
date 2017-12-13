@@ -19,11 +19,6 @@ import com.wz.levelvertical.model.DesignersCase;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * 设计师详情第三个页面
- * Created by sj on 2017/9/20.
- */
-
 public class DeatilsFragment extends Fragment {
 
     private TextView tvTitleMiddle;

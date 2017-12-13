@@ -12,11 +12,6 @@ import android.widget.ImageView;
 import com.bumptech.glide.Glide;
 import com.wz.levelvertical.R;
 
-/**
- * 设计师详情第一屏中的子页面
- * Created by wz on 2017/6/24.
- */
-
 public class DesignersFragment extends BackHandledFragment {
 
     @Nullable

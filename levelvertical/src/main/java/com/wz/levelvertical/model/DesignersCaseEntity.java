@@ -3,7 +3,6 @@ package com.wz.levelvertical.model;
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class DesignersCaseEntity extends BaseEntity<DesignersCaseEntity> {
 
     private List<DesignersCase> list = new ArrayList<>();

@@ -10,10 +10,6 @@ import android.support.v4.view.ViewPager;
 
 import java.util.List;
 
-/**
- * Created by sj on 2017/8/2.
- */
-
 public class BackHandlerHelper {
     /**
      * 将back事件分发给 FragmentManager 中管理的子Fragment，如果该 FragmentManager 中的所有Fragment都

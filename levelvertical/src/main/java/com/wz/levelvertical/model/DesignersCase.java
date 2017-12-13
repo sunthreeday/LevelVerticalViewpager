@@ -1,10 +1,5 @@
 package com.wz.levelvertical.model;
 
-/**
- * 设计师案例
- * Created by sj on 2017/8/23.
- */
-
 public class DesignersCase {
 
     private String case_h5_url = "";

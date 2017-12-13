@@ -1,15 +1,5 @@
 package com.wz.levelvertical.model;
 
-/**
- * 
- * @Author LiJingHuan
- * @Email:ljh0576123@163.com
- * @CreateTime:2015-6-4 下午4:38:39
- * @Description:实体基类
- * @Modifier:
- * @ModifyContent:
- * 
- */
 public class BaseEntity<T> {
 	private String message = "";
 	private T data;

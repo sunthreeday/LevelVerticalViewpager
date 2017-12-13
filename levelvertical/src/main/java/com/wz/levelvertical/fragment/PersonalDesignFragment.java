@@ -17,11 +17,6 @@ import com.wz.levelvertical.util.SharedPrefUtils;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * 设计师详情第二个页面
- * Created by wz on 2017/7/18.
- */
-
 public class PersonalDesignFragment extends Fragment {
 
     private ImageButton ivBackIcon;

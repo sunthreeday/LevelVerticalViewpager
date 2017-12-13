@@ -3,10 +3,6 @@ package com.wz.levelvertical.fragment;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 
-/**
- * Created by sj on 2017/8/2.
- */
-
 public abstract class BackHandledFragment extends Fragment implements FragmentBackHandler{
     public BackHandledFragment() {
     }

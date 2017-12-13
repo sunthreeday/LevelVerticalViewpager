@@ -18,11 +18,6 @@ import com.wz.levelvertical.R;
 import com.wz.levelvertical.model.DesignersCase;
 import com.wz.levelvertical.view.Html5Webview;
 
-/**
- * 设计师详情第四个页面
- * Created by sj on 2017/9/13.
- */
-
 public class DesignerCaseFragment extends Fragment {
 
     private ImageButton ivBackIcon;
