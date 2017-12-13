@@ -18,10 +18,6 @@ import com.wz.levelvertical.R;
 import com.wz.levelvertical.model.DesignersCase;
 import com.wz.levelvertical.view.Html5Webview;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
-
 /**
  * 设计师详情第四个页面
  * Created by sj on 2017/9/13.
@@ -29,25 +25,27 @@ import butterknife.OnClick;
 
 public class DesignerCaseFragment extends Fragment {
 
-    @BindView(R.id.iv_back_icon)
-    ImageButton ivBackIcon;
-    @BindView(R.id.right_one_icon)
-    ImageButton rightOneIcon;
-    @BindView(R.id.right_two_icon)
-    ImageButton rightTwoIcon;
-    @BindView(R.id.tv_title_middle)
-    TextView tvTitleMiddle;
-    @BindView(R.id.case_web)
-    Html5Webview caseWeb;
+    private ImageButton ivBackIcon;
+    private ImageButton rightOneIcon;
+    private TextView tvTitleMiddle;
+    private Html5Webview caseWeb;
     private OnePageFragment.backOnePageListener backOnePageListener;
-    private DesignersCase designersCase;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
         View view = inflater.inflate(R.layout.fragment_designer_case_web, container, false);
-        ButterKnife.bind(this, view);
+        ivBackIcon = (ImageButton) view.findViewById(R.id.iv_back_icon);
+        ivBackIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getActivity().onBackPressed();
+            }
+        });
+        tvTitleMiddle = (TextView) view.findViewById(R.id.tv_title_middle);
+        rightOneIcon = (ImageButton) view.findViewById(R.id.right_one_icon);
         rightOneIcon.setImageResource(R.drawable.back_top);
+        caseWeb = (Html5Webview) view.findViewById(R.id.case_web);
         caseWeb.getSettings().setDomStorageEnabled(true);
         caseWeb.getSettings().setCacheMode(WebSettings.LOAD_NO_CACHE);
         //允许混合内容 解决部分手机 加载不出https请求里面的http下的图片
@@ -58,7 +56,6 @@ public class DesignerCaseFragment extends Fragment {
     }
 
     public void setData(int curIndex, DesignersCase designersCase) {
-        this.designersCase = designersCase;
         ivBackIcon.setImageResource(R.drawable.back_npc);
         rightOneIcon.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,15 +74,6 @@ public class DesignerCaseFragment extends Fragment {
             }
         });
         caseWeb.loadUrl(designersCase.getCase_h5_url());
-    }
-
-    @OnClick({R.id.iv_back_icon})
-    public void onViewClicked(View view) {
-        switch (view.getId()) {
-            case R.id.iv_back_icon:
-                getActivity().onBackPressed();
-                break;
-        }
     }
 
     public void setBackOnePageListener(OnePageFragment.backOnePageListener backOnePageListener) {

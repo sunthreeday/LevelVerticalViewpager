@@ -22,9 +22,6 @@ import com.wz.levelvertical.view.DesignersViewPager;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-
 import static com.wz.levelvertical.util.SimulateNetAPI.getOriginalFundData;
 
 /**
@@ -37,8 +34,6 @@ public class DesignerDeatilListActivity extends FragmentActivity {
     private List<Fragment> fragmentContainter;
     private DesignersViewPager ultraViewPager;
     private int curIndex = 0;
-    @BindView(R.id.iv_back_icon)
-    ImageButton ivBackIcon;
     private RelativeLayout rlhead;
     private int pos;
 
@@ -54,7 +49,7 @@ public class DesignerDeatilListActivity extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_designer_deatil);
-        ButterKnife.bind(this);
+        ImageButton ivBackIcon= (ImageButton) findViewById(R.id.iv_back_icon);
         ivBackIcon.setImageResource(R.drawable.back_npc);
         ivBackIcon.setOnClickListener(new View.OnClickListener() {
             @Override

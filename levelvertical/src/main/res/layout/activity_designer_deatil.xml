@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:clipChildren="false">
 
-        <com.wz.levelverticalviewpager.view.DesignersViewPager
+        <com.wz.levelvertical.view.DesignersViewPager
             android:id="@+id/ultra_viewpager"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

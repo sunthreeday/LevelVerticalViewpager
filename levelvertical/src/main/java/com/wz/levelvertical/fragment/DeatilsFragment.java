@@ -19,10 +19,6 @@ import com.wz.levelvertical.model.DesignersCase;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
-
 /**
  * 设计师详情第三个页面
  * Created by sj on 2017/9/20.
@@ -30,31 +26,30 @@ import butterknife.OnClick;
 
 public class DeatilsFragment extends Fragment {
 
-    @BindView(R.id.iv_back_icon)
-    ImageButton ivBackIcon;
-    @BindView(R.id.right_one_icon)
-    ImageButton rightOneIcon;
-    @BindView(R.id.right_two_icon)
-    ImageButton rightTwoIcon;
-    @BindView(R.id.tv_title_middle)
-    TextView tvTitleMiddle;
-    @BindView(R.id.viewpager_case)
-    ViewPager mViewPager;
-    @BindView(R.id.black_indicator)
-    ImageView blackIndicator;
+    private TextView tvTitleMiddle;
+    private ViewPager mViewPager;
     private List<DesignersCase> mcaseList = new ArrayList<>();
     private int curIndex;
     private OnePageFragment.backOnePageListener backOnePageListener;
     private OnePageFragment.clicktoPageListener clicktoPageListener;
-    private List<DesignersCase> data;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
         View view = inflater.inflate(R.layout.fragment_designer_case, container, false);
-        ButterKnife.bind(this, view);
+        ImageButton ivBackIcon = (ImageButton) view.findViewById(R.id.iv_back_icon);
+        ivBackIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getActivity().onBackPressed();
+            }
+        });
+        ImageButton rightOneIcon = (ImageButton) view.findViewById(R.id.right_one_icon);
         rightOneIcon.setImageResource(R.drawable.back_top);
+        tvTitleMiddle = (TextView) view.findViewById(R.id.tv_title_middle);
         tvTitleMiddle.setTextColor(R.color.black_color);
+        mViewPager = (ViewPager) view.findViewById(R.id.viewpager_case);
+        ImageView blackIndicator = (ImageView) view.findViewById(R.id.black_indicator);
         blackIndicator.setImageResource(R.drawable.up_black_indicator);
         // 1. 设置动画
         AnimationDrawable animationDrawable = (AnimationDrawable) blackIndicator.getDrawable();
@@ -166,15 +161,6 @@ public class DeatilsFragment extends Fragment {
             tvtpe.setText(item.getHouse_area());
             tvdesigner.setText(getString(R.string.customer_satisfaction));
             tvTitleMiddle.setText(item.getDesigner_name() + getString(R.string.whose_case));
-        }
-    }
-
-    @OnClick({R.id.iv_back_icon})
-    public void onViewClicked(View view) {
-        switch (view.getId()) {
-            case R.id.iv_back_icon:
-                getActivity().onBackPressed();
-                break;
         }
     }
 

@@ -17,9 +17,6 @@ import com.wz.levelvertical.util.SharedPrefUtils;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-
 /**
  * 设计师详情第二个页面
  * Created by wz on 2017/7/18.
@@ -27,16 +24,9 @@ import butterknife.ButterKnife;
 
 public class PersonalDesignFragment extends Fragment {
 
-    @BindView(R.id.iv_back_icon)
-    ImageButton ivBackIcon;
-    @BindView(R.id.right_one_icon)
-    ImageButton rightOneIcon;
-    @BindView(R.id.right_two_icon)
-    ImageButton rightTwoIcon;
-    @BindView(R.id.white_indicator)
-    ImageView whiteIndicator;
-    @BindView(R.id.designer_img)
-    ImageView designerImg;
+    private ImageButton ivBackIcon;
+    private ImageButton rightOneIcon;
+    private ImageView designerImg;
     private List<AllDesignersEntity.DesignerListBean> mdesignlist = new ArrayList<>();
     private OnePageFragment.backOnePageListener backOnePageListener;
     private int index = 0;
@@ -45,17 +35,21 @@ public class PersonalDesignFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
         View view = inflater.inflate(R.layout.fragment_personal_designer, container, false);
-        ButterKnife.bind(this, view);
-        rightOneIcon.setImageResource(R.drawable.back_top_white);
-        whiteIndicator.setImageResource(R.drawable.up_white_indicator);
-        AnimationDrawable animationDrawable = (AnimationDrawable) whiteIndicator.getDrawable();
-        animationDrawable.start();
+        designerImg = (ImageView) view.findViewById(R.id.designer_img);
+        ivBackIcon = (ImageButton) view.findViewById(R.id.iv_back_icon);
         ivBackIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 getActivity().onBackPressed();
             }
         });
+        rightOneIcon = (ImageButton) view.findViewById(R.id.right_one_icon);
+        rightOneIcon.setImageResource(R.drawable.back_top_white);
+        ImageView whiteIndicator = (ImageView) view.findViewById(R.id.white_indicator);
+        whiteIndicator.setImageResource(R.drawable.up_white_indicator);
+        AnimationDrawable animationDrawable = (AnimationDrawable) whiteIndicator.getDrawable();
+        animationDrawable.start();
+
         mdesignlist = (List<AllDesignersEntity.DesignerListBean>) SharedPrefUtils.get(getContext(), "designers", "designer");
         return view;
     }
@@ -81,9 +75,4 @@ public class PersonalDesignFragment extends Fragment {
         this.backOnePageListener = backOnePageListener;
     }
 
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        designerImg = null;
-    }
 }
