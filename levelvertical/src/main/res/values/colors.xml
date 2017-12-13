@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="black_color">#000000</color>
+    <color name="white_color">#FFFFFFFF</color>
+    <color name="scroll_bg_color">#f4f4f4</color>
+    <color name="npc_green">#86b86b</color>
+    <color name="treight_black_color">#CC000000</color>
+    <color name="trnine_black_color">#E6000000</color>
+</resources>
