@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">LevelVerticalViewpager</string>
+    <string name="customer_satisfaction">客户满意度</string>
+    <string name="whose_case">的介绍</string>
+</resources>

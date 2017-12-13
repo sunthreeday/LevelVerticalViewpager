@@ -1,0 +1,30 @@
+{
+  "code": 200,
+  "data": {
+    "designer_list": [
+      {
+        "designer_name": "柯基",
+        "designer_uid": "43315366809567659",
+        "full_body_shot_url": "http://www.lady8844.com/h035/h15/img201402132348230.jpg",
+        "head_image_url": "http://www.lady8844.com/h035/h15/img201402132348230.jpg",
+        "personality_photo_url": "http://www.lady8844.com/h035/h15/img201402132348230.jpg"
+      },
+      {
+        "designer_level": "http://os5lxzkas.bkt.clouddn.com/score_2.png",
+        "designer_name": "蓝猫",
+        "designer_uid": "43315366809567657",
+        "full_body_shot_url": "https://tse1-mm.cn.bing.net/th?id=OIP.2IXmipC2PTuDe2b9RM8pRQDSEs&p=0&pid=1.1",
+        "head_image_url": "https://tse1-mm.cn.bing.net/th?id=OIP.2IXmipC2PTuDe2b9RM8pRQDSEs&p=0&pid=1.1",
+        "personality_photo_url": "https://tse1-mm.cn.bing.net/th?id=OIP.2IXmipC2PTuDe2b9RM8pRQDSEs&p=0&pid=1.1"
+      },
+      {
+        "designer_name": "柴犬",
+        "designer_uid": "43315366809567655",
+        "full_body_shot_url": "http://www.qqmofasi.com/data/attachments/2014/05/30/42_TpzZQPe14fZ6Gm2MGbLb_large.jpeg",
+        "head_image_url": "http://www.qqmofasi.com/data/attachments/2014/05/30/42_TpzZQPe14fZ6Gm2MGbLb_large.jpeg",
+        "personality_photo_url": "http://www.qqmofasi.com/data/attachments/2014/05/30/42_TpzZQPe14fZ6Gm2MGbLb_large.jpeg"
+      }
+    ]
+  },
+  "error_msg": ""
+}

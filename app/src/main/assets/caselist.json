@@ -1,0 +1,38 @@
+{
+  "code": 200,
+  "data": {
+    "list": [
+      {
+        "case_h5_url": "https://shejiin.net/case/43315366809567888.html",
+        "case_image_url": "https://assets.wesetup.cn/2017/11/16/1510813733137-b8ig4wbpye38bcmjdierssjor.jpg",
+        "case_name": "宝业四季园",
+        "designer_level": "http://os5lxzkas.bkt.clouddn.com/score_2.png",
+        "designer_name": "柯基",
+        "designer_uid": "43315366809567883",
+        "head_image_url": "https://assets.wesetup.cn/2017/11/16/1510813321488-n5n9v1h4lzaba4wox6c877gb9.jpg",
+        "house_area": "大只"
+      },
+      {
+        "case_h5_url": "https://shejiin.net/case/43315366809567886.html",
+        "case_image_url": "https://assets.wesetup.cn/2017/11/16/1510813583693-d9hwwpsvg7sh2vzvqmz0yhkt9.jpg",
+        "case_name": "天香华庭",
+        "designer_level": "http://os5lxzkas.bkt.clouddn.com/score_2.png",
+        "designer_name": "柯基",
+        "designer_uid": "43315366809567883",
+        "head_image_url": "https://assets.wesetup.cn/2017/11/16/1510813321488-n5n9v1h4lzaba4wox6c877gb9.jpg",
+        "house_area": "大只"
+      },
+      {
+        "case_h5_url": "https://shejiin.net/case/43315366809567884.html",
+        "case_image_url": "https://assets.wesetup.cn/2017/11/16/1510813396257-4ltlkrwvn1vsozbg1fl90e8kt9.jpg",
+        "case_name": "铭丰臻园",
+        "designer_level": "http://os5lxzkas.bkt.clouddn.com/score_2.png",
+        "designer_name": "柯基",
+        "designer_uid": "43315366809567883",
+        "head_image_url": "https://assets.wesetup.cn/2017/11/16/1510813321488-n5n9v1h4lzaba4wox6c877gb9.jpg",
+        "house_area": "超大只"
+      }
+    ]
+  },
+  "error_msg": ""
+}
