@@ -1,6 +1,4 @@
-package com.wz.levelvertical.fragment;
-
-//承载VerticalViewPager的 fragment,一个设计师一个
+package com.wz.levelverticalviewpager;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -9,8 +7,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.wz.levelvertical.DesignerDeatilListActivity;
-import com.wz.levelvertical.R;
+import com.wz.levelvertical.fragment.DeatilsFragment;
+import com.wz.levelvertical.fragment.DesignerCaseFragment;
+import com.wz.levelvertical.fragment.DesignersFragment;
+import com.wz.levelvertical.fragment.PersonalDesignFragment;
 import com.wz.levelvertical.model.DesignersCase;
 import com.wz.levelvertical.view.VerticalPagerAdapter;
 import com.wz.levelvertical.view.VerticalViewPager;
@@ -18,9 +18,11 @@ import com.wz.levelvertical.view.VerticalViewPager;
 import java.util.ArrayList;
 import java.util.List;
 
-public class OnePageFragment extends Fragment {
+/**
+ * Created by sj on 2017/12/14.
+ */
 
-    private List<DesignersCase> mcaseList;
+public class PagerFragment extends Fragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -29,17 +31,9 @@ public class OnePageFragment extends Fragment {
 
     private String designer_uid;
     private int curIndex;
-    private DesignerDeatilListActivity.changeVerticalPageListener changeListener;
-    private DesignerDeatilListActivity.scrollPagerListener scrollListener;
+    private LevelVerticalActivity.changeVerticalPageListener changeListener;
+    private LevelVerticalActivity.scrollPagerListener scrollListener;
     private VerticalViewPager checkOne;
-
-    public interface backOnePageListener {
-        void onbackOnePageChanged();
-    }
-
-    public interface clicktoPageListener {
-        void onclickToPageListener();
-    }
 
     private List<Fragment> listFragments;
 
@@ -64,12 +58,6 @@ public class OnePageFragment extends Fragment {
 
 //		添加第二个视频页面
         PersonalDesignFragment personalFragment = new PersonalDesignFragment();
-        personalFragment.setBackOnePageListener(new backOnePageListener() {
-            @Override
-            public void onbackOnePageChanged() {
-                checkOne.setCurrentItem(0);
-            }
-        });
         listFragments.add(personalFragment);
 
 //      添加第三个案例封面切换页面
@@ -77,19 +65,6 @@ public class OnePageFragment extends Fragment {
         Bundle bundle = new Bundle();
         bundle.putString("designer_uid", designer_uid);
         t.setArguments(bundle);
-        t.setBackOnePageListener(new backOnePageListener() {
-            @Override
-            public void onbackOnePageChanged() {
-                checkOne.setCurrentItem(0);
-            }
-        });
-        t.setClicktoPageListener(new clicktoPageListener() {
-            @Override
-            public void onclickToPageListener() {
-                checkOne.setCurrentItem(3);
-            }
-        });
-
         listFragments.add(t);
 
 //        添加第四个案例详情webview页面
@@ -97,13 +72,6 @@ public class OnePageFragment extends Fragment {
         Bundle tbundle = new Bundle();
         tbundle.putString("designer_name", getArguments().getString("name"));
         caseFragment.setArguments(tbundle);
-
-        caseFragment.setBackOnePageListener(new backOnePageListener() {
-            @Override
-            public void onbackOnePageChanged() {
-                checkOne.setCurrentItem(2);
-            }
-        });
         listFragments.add(caseFragment);
         VerticalPagerAdapter fragmentAdapter = new VerticalPagerAdapter(
                 getChildFragmentManager(), listFragments);
@@ -166,11 +134,11 @@ public class OnePageFragment extends Fragment {
 
     }
 
-    public void setScrollListener(DesignerDeatilListActivity.scrollPagerListener scrollListener) {
+    public void setScrollListener(LevelVerticalActivity.scrollPagerListener scrollListener) {
         this.scrollListener = scrollListener;
     }
 
-    public void setChangeVerticalPageListener(DesignerDeatilListActivity.changeVerticalPageListener changeListener) {
+    public void setChangeVerticalPageListener(LevelVerticalActivity.changeVerticalPageListener changeListener) {
         this.changeListener = changeListener;
     }
 

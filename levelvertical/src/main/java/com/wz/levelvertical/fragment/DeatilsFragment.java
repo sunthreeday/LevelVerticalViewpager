@@ -15,9 +15,13 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.wz.levelvertical.R;
 import com.wz.levelvertical.model.DesignersCase;
+import com.wz.levelvertical.model.DesignersCaseEntity;
+import com.wz.levelvertical.util.JsonUtils;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static com.wz.levelvertical.util.SimulateNetAPI.getOriginalFundData;
 
 public class DeatilsFragment extends Fragment {
 
@@ -51,6 +55,7 @@ public class DeatilsFragment extends Fragment {
         // 2. 获取动画对象
         animationDrawable.start();
         if (getArguments() != null) {
+            loadData();
             ivBackIcon.setImageResource(R.drawable.back_npc);
             rightOneIcon.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -62,6 +67,13 @@ public class DeatilsFragment extends Fragment {
             });
         }
         return view;
+    }
+
+    private void loadData() {
+        String response = getOriginalFundData(getActivity(), "caselist.json");
+        DesignersCaseEntity caseEntity = JsonUtils.parseT(response, DesignersCaseEntity.class);
+        mcaseList = caseEntity.getData().getList();
+        initView();
     }
 
     private void initView() {
@@ -91,11 +103,6 @@ public class DeatilsFragment extends Fragment {
 
     public DesignersCase getCurIndexCase() {
         return mcaseList.get(curIndex);
-    }
-
-    public void setData(List<DesignersCase> data) {
-        this.mcaseList = data;
-        initView();
     }
 
     private class CardPagerAdapter extends PagerAdapter {
