@@ -11,52 +11,71 @@
 ![image](https://github.com/sunthreeday/LVViewpager/blob/master/screen.gif)
 
 
-主要功能
-支持横向滑动／纵向滑动
-支持一屏内显示多页
+#### **主要功能**
 
-使用方法
+**支持横向滑动／纵向滑动**
+**支持一屏内显示多页**
 
-gradle
+----------
+#### **使用方法**
 
-Step 1. Add the JitPack repository to your build file
+> Add it in your root build.gradle at the end of repositories:
 
-Add it in your root build.gradle at the end of repositories:
+**gradle**
+
+**Step 1. Add the JitPack repository to your build file**
+
+
+```
 allprojects {
 		repositories {
 			...
 			maven { url 'https://jitpack.io' }
 		}
 	}
-  
-Step 2. Add the dependency
+```
 
+  
+**Step 2. Add the dependency**
+
+```
 dependencies {
 	        compile 'com.github.sunthreeday:LevelVerticalViewpager:v1.0.4'
 	}
+```
 
-maven
+**maven**
 
-Step 1. Add the JitPack repository to your build file
+**Step 1. Add the JitPack repository to your build file**
 
+```
 <repositories>
 		<repository>
 		    <id>jitpack.io</id>
 		    <url>https://jitpack.io</url>
 		</repository>
 	</repositories>
+```
+
   
-  Step 2. Add the dependency
-  
-  <dependency>
+  **Step 2. Add the dependency**
+
+ 
+
+```
+ <dependency>
 	    <groupId>com.github.sunthreeday</groupId>
 	    <artifactId>LevelVerticalViewpager</artifactId>
 	    <version>v1.0.4</version>
 	</dependency>
-  
+```
+----------
+  
 具体代码实现，可以copy代码到本地运行
 这个项目是用jitpack引用
 数据是读取本地的json，如要修改完成自己的需求
 请转向另个地址，这个是完整的Demo
-https://github.com/sunthreeday/LVViewpager
+[点击](https://github.com/sunthreeday/LVViewpager)
+  
+
 欢迎提建议，帮助我修改，我将感激不尽！
