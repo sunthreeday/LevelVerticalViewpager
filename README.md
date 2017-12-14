@@ -71,10 +71,10 @@ dependencies {
 ```
 ----------
   
-具体代码实现，可以copy代码到本地运行
-这个项目是用jitpack引用
-数据是读取本地的json，如要修改完成自己的需求
-请转向另个地址，这个是完整的Demo
+具体代码实现，可以copy代码到本地运行<br>
+这个项目是用jitpack引用<br>
+数据是读取本地的json，如要修改完成自己的需求<br>
+请转向另个地址，这个是完整的Demo<br>
 [点击](https://github.com/sunthreeday/LVViewpager)
   
 
